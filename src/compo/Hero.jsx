@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Nav } from "./Nav"
 import heroGirl from "../../assets/heroGirl.svg"
+import "../Hero.css"
 
 export function Hero() {
 
