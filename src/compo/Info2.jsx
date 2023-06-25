@@ -4,7 +4,7 @@ import { AritcleInfo } from "./AritcleInfo"
 export function Info2() {
     const INFO_ARRAY = ["Cada línea escrita es un paso hacia la materialización de un sueño",
         "La programación es el arte de dar vida a las ideas a través del código",
-        " Tu perseverancia y creatividad son las herramientas clave para construir el futuro digital que todos anhelamos."]
+        " Tu perseverancia y creatividad son las claves para construir nuestro el futuro digital."]
 
     return (
         <article>

@@ -1,5 +1,5 @@
 @media screen and (max-width:450px){
-    .hero h1{
+    h1{
         font-size: 35px;
     }
 }

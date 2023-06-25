@@ -145,7 +145,7 @@ h2 {
   }
 }
 
-.hero nav img {
+.hero nav img.logo {
   width: 60px;
   padding-top: 5px;
 }
@@ -388,9 +388,15 @@ h2 {
   translate: 5px 0;
 }
 
+.section2 article .aritcle-info:hover button {
+  box-shadow: 0 0 15px 0 #fff;
+}
+
 .section2 article .aritcle-info button {
+  display: grid;
+  place-content: center;
   position: absolute;
-  width: 35px;
+  width: 40px;
   border-radius: 50%;
   aspect-ratio: 1/1;
   bottom: -17px;
@@ -398,4 +404,11 @@ h2 {
   background-color: #fff;
   box-shadow: 0 0 10px 0 #fff;
   cursor: pointer;
+  padding-left: 2px;
+  transition: all .3s;
+}
+
+.section2 article .aritcle-info button img {
+  transition: all .3s;
+  width: 15px;
 }

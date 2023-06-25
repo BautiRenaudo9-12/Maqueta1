@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg"
 
 export function Nav() {
     const [navStyle, setNavStyle] = useState({})
@@ -13,7 +13,7 @@ export function Nav() {
 return (
     <nav style={navStyle}>
         <div className="logo">
-            <img className="logo" src={Logo} alt="Logo" />
+            <img className="logo" src={logo} alt="Logo" />
         </div>
         <ul>
             <li>Home</li>
