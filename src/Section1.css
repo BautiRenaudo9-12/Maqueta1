@@ -1,0 +1,12 @@
+@media screen and (max-width: 650px) {
+    .section1 h2 {
+        width: auto;
+        margin: 60px auto;
+      }
+    .section1 .info{
+        flex-wrap: wrap;
+    }
+    .section1 .info .line{
+        display: none;
+    }
+}
