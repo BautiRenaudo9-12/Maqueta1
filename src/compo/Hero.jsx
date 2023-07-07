@@ -1,14 +1,30 @@
 import { TypeAnimation } from 'react-type-animation';
+import { useState } from 'react';
 import { Nav } from "./Nav"
+import { Nav2 } from "./Nav2"
 import heroGirl from "../../assets/heroGirl.svg"
 import "../Hero.css"
 
 export function Hero() {
+    const [navStyle, setNavStyle] = useState({})
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
+    window.onscroll = () => {
+        window.scrollY > 0
+            ? setNavStyle({ background: " var(--light-black)", backdropFilter: " blur(5px)" })
+            : setNavStyle({})
+    }
+    window.onresize = () => {
+        setWindowWidth(window.innerWidth)
+    }
 
     return (
         <div className="hero">
-            <Nav />
+            {
+                windowWidth > 600
+                    ? <Nav navStyle={navStyle} />
+                    : <Nav2 navStyle={navStyle} />
+            }
             <div className="middle">
                 <TypeAnimation
                     sequence={[

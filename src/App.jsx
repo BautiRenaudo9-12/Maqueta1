@@ -7,6 +7,7 @@ import { Hero } from "./compo/Hero"
 import { Section1 } from "./compo/Section1"
 import { Section2 } from "./compo/Section2"
 import { Section3 } from "./compo/Section3"
+import { Section4 } from "./compo/Section4"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
@@ -22,6 +23,7 @@ function App() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </>
   )
 }
