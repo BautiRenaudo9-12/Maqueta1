@@ -174,15 +174,15 @@ h2 {
   gap: 100px;
 }
 
-.hero nav ul li {
+.hero nav ul li a {
   display: block;
   transition: all .2s;
   cursor: pointer;
-  padding: 8px;
   font-size: 14px;
+  padding: 8px;
 }
 
-.hero nav ul li:hover {
+.hero nav ul li a:hover {
   padding-top: 5px;
   text-shadow: 0 0px 2px #ffffff;
 }
@@ -196,10 +196,8 @@ h2 {
   position: fixed;
   z-index: 500;
   mix-blend-mode: hard-light;
+
   transition: all .3s;
-
-  background-color: blue;
-
   animation: slide-down 1s ease-in-out;
 }
 
@@ -210,7 +208,6 @@ h2 {
   align-items: end;
   gap: 120px;
   position: fixed;
-  background: red;
   top: 0;
   right: 0;
   width: 80%;
@@ -218,6 +215,10 @@ h2 {
   height: 100%;
   z-index: -1;
   padding-right: 20px;
+  overflow: hidden;
+  background: linear-gradient(to left, black, rgba(255, 255, 255, 0));
+
+  transition: all ease-in .4s;
 }
 
 .hero nav.nav2 ul li {
@@ -242,6 +243,12 @@ h2 {
 
 .hero nav.nav2 ul li:hover::before {
   width: 100%;
+}
+
+.hero nav.nav2 .nav-button img {
+  width: 35px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 .hero .middle {
@@ -653,4 +660,34 @@ h2 {
 .section4 form button:hover {
   background: transparent;
   color: var(--light-black);
+}
+
+
+
+footer * {
+  color: var(--light-black);
+  font-weight: bold;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 50dvh;
+  margin-top: 400px;
+  text-align: center;
+}
+
+footer .nav-items {
+  display: flex;
+  gap: 100px;
+  margin: 120px 0;
+}
+
+footer .nav-items li {
+  cursor: pointer;
+}
+
+footer .info p {
+  font-size: 13px;
 }

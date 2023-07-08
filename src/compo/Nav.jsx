@@ -1,7 +1,7 @@
 import { useState } from "react"
 import logo from "../../assets/logo.svg"
 
-export function Nav({navStyle}) {
+export function Nav({ navStyle, navItems }) {
 
     return (
         <nav className="nav1" style={navStyle}>
@@ -9,9 +9,11 @@ export function Nav({navStyle}) {
                 <img className="logo" src={logo} alt="Logo" />
             </div>
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Contact</li>
+                {
+                    navItems.map(([name, idFor], i) => {
+                        return <li key={i} ><a href={"#" + idFor}>{name}</a></li>
+                    })
+                }
             </ul>
         </nav>
     )

@@ -5,7 +5,7 @@ import { Nav2 } from "./Nav2"
 import heroGirl from "../../assets/heroGirl.svg"
 import "../Hero.css"
 
-export function Hero() {
+export function Hero({navItems}) {
     const [navStyle, setNavStyle] = useState({})
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
@@ -19,11 +19,11 @@ export function Hero() {
     }
 
     return (
-        <div className="hero">
+        <div className="hero" id='hero'>
             {
                 windowWidth > 600
-                    ? <Nav navStyle={navStyle} />
-                    : <Nav2 navStyle={navStyle} />
+                    ? <Nav navStyle={navStyle} navItems={navItems} />
+                    : <Nav2 navStyle={navStyle} navItems={navItems}/>
             }
             <div className="middle">
                 <TypeAnimation
