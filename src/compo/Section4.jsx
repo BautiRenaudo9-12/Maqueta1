@@ -1,6 +1,7 @@
 import characterSvg from "../../assets/character.svg"
 import cubeSvg from "../../assets/cube.svg"
 import {Form} from "../compo/Form"
+import "../Section4.css"
 
 export function Section4() {
 

@@ -1,0 +1,13 @@
+@media screen and (max-width: 1000px) {
+    .section4 .character {
+        top: 200px;
+    }
+
+    .section4 .cube {
+        opacity: 0;
+    }
+
+    .section4 form {
+        top: 55%;
+    }
+}

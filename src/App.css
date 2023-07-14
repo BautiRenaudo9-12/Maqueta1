@@ -549,11 +549,12 @@ h2 {
 
 .section4 {
   width: 100%;
-  min-height: 140vh;
+  min-height: 160vh;
   background: var(--light-yellow);
   background-color: var(--light-yellow);
   position: relative;
   padding-top: 140px;
+  overflow: hidden;
 }
 
 .section4 h2 {
@@ -568,6 +569,7 @@ h2 {
   top: 150px;
   right: 20%;
   width: 300px;
+  transition: all .3s;
   animation: floatUpDown 10s ease-in-out infinite;
 }
 
@@ -578,6 +580,7 @@ h2 {
   left: -20%;
   width: 800px;
   rotate: -40deg;
+  transition: all .3s;
 
   animation: floatUpDown 15s ease-in-out infinite;
 }
@@ -594,7 +597,7 @@ h2 {
   background-color: #00000020;
   backdrop-filter: blur(10px);
   left: 50%;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%);
   padding: 0 50px;
   padding-top: 30px;
@@ -671,10 +674,10 @@ footer * {
 
 footer {
   display: grid;
-  place-content: center;
+  place-content: end;
+  justify-content: center;
   width: 100%;
-  height: 50dvh;
-  margin-top: 400px;
+  height: 70dvh;
   text-align: center;
 }
 
