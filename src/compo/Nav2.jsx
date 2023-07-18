@@ -5,9 +5,8 @@ import navButton from "../../assets/navButton.svg"
 export function Nav2({ navStyle, navItems }) {
     const [indiceNav, setIndiceNav] = useState(0)
 
-    
     return (
-        <nav className="nav2">
+        <nav className="nav2" style={{ ...navStyle, backdropFilter: "none" }}>
             <div className="logo">
                 <img className="logo" src={logo} alt="Logo" />
             </div>
@@ -33,6 +32,6 @@ export function Nav2({ navStyle, navItems }) {
                     })
                 }
             </ul>
-        </nav>
+        </nav >
     )
 }
