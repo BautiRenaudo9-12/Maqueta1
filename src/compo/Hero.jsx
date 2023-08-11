@@ -1,13 +1,20 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Nav } from "./Nav"
 import { Nav2 } from "./Nav2"
-import heroGirl from "../../assets/heroGirl.svg"
+import heroGirl from "../../assets/heroGirl.png"
 import "../Hero.css"
 
-export function Hero({navItems}) {
+export function Hero({ navItems }) {
     const [navStyle, setNavStyle] = useState({})
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [heroGirlStyles, setHeroGirlStyles] = useState({ width: "150px" })
+
+    useEffect(() => {
+        setTimeout(() => {
+            setHeroGirlStyles({ width: "250px" })
+        }, 200);
+    })
 
     window.onscroll = () => {
         window.scrollY > 0
@@ -23,7 +30,7 @@ export function Hero({navItems}) {
             {
                 windowWidth > 600
                     ? <Nav navStyle={navStyle} navItems={navItems} />
-                    : <Nav2 navStyle={navStyle} navItems={navItems}/>
+                    : <Nav2 navStyle={navStyle} navItems={navItems} />
             }
             <div className="middle">
                 <TypeAnimation
@@ -48,7 +55,9 @@ export function Hero({navItems}) {
                     </button>
                 </a>
             </div>
-            <img className="heroGirl" src={heroGirl} alt="Una chica" />
+            <img
+                style={heroGirlStyles}
+                className="heroGirl" src={heroGirl} alt="Una chica" />
         </div >
     )
 }
