@@ -6,7 +6,7 @@ export function Footer({ navItems }) {
             <div className="nav-items">
                 {
                     navItems.map(([name, idFor], i) => {
-                        return <li key={i} ><a href={"#" + idFor}>{name}</a></li>
+                        return <li key={i}><a href={"#" + idFor}>{name}</a></li>
                     })
                 }
             </div>
